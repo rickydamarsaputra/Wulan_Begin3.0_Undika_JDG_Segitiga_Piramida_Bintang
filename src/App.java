@@ -11,15 +11,14 @@ public class App {
 
         System.out.print("Masukan Pilihan Anda: ");
         Integer pilihan = scanner.nextInt();
-        System.out.print("Masukan Jumlah Baris: ");
-        Integer jumlahBaris = scanner.nextInt();
-
         Integer counterA, counterB, counterC;
 
         switch (pilihan) {
             case 1:
+                System.out.print("Masukan Jumlah Baris: ");
+                Integer jumlahBarisSegitiga = scanner.nextInt();
                 System.out.print("======= Hasil Segitiga Bintang =======");
-                for (counterA = 0; counterA <= jumlahBaris; counterA++) {
+                for (counterA = 0; counterA <= jumlahBarisSegitiga; counterA++) {
                     for (counterB = 0; counterB < counterA; counterB++) {
                         System.out.print(" *");
                     }
@@ -27,9 +26,11 @@ public class App {
                 }
                 break;
             case 2:
+                System.out.print("Masukan Jumlah Baris: ");
+                Integer jumlahBarisPiramida = scanner.nextInt();
                 System.out.println("======= Hasil Piramida Bintang =======");
-                for (counterA = 1; counterA <= jumlahBaris; counterA++) {
-                    for (counterB = 1; counterB <= jumlahBaris - counterA; counterB++)
+                for (counterA = 1; counterA <= jumlahBarisPiramida; counterA++) {
+                    for (counterB = 1; counterB <= jumlahBarisPiramida - counterA; counterB++)
                         System.out.print(" ");
                     for (counterC = 1; counterC < (counterA * 2); counterC++) {
                         System.out.print("*");
@@ -37,8 +38,6 @@ public class App {
                     System.out.println("");
                 }
                 break;
-            default:
-                System.out.println("Terima Kasih...");
         }
 
         scanner.close();
