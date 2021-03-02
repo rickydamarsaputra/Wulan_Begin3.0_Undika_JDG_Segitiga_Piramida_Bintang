@@ -14,7 +14,7 @@ public class App {
         System.out.print("Masukan Jumlah Baris: ");
         Integer jumlahBaris = scanner.nextInt();
 
-        Integer counterA, counterB, counterC, counterD;
+        Integer counterA, counterB, counterC;
 
         switch (pilihan) {
             case 1:
